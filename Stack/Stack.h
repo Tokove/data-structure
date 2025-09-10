@@ -17,7 +17,7 @@ public:
     ~Stack();
     void Push(int val);
     void Pop();
-    int Top();
-    int Size()const;
-    bool Empty()const;
+    int Top() const;
+    int Size() const;
+    bool Empty() const;
 };

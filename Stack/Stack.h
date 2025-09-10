@@ -1,5 +1,5 @@
 // 栈
-
+#pragma once
 // 创建节点
 struct Node
 {

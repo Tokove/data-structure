@@ -1,4 +1,4 @@
-#include"BinarySearchTreee.h"
+#include"BinarySearchTree.h"
 
 BstNode* BinarySearchTree::Insert(BstNode* root, int val){
     if(root == nullptr){

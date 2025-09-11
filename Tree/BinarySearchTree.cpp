@@ -1,6 +1,6 @@
 #include"BinarySearchTree.h"
 
-// 递归版本
+// Recursive version
 BstNode* BinarySearchTree::Insert(BstNode* root, int val){
     if(root == nullptr) root = new BstNode{val, nullptr, nullptr};
     else if(val <= root->data) root->left = Insert(root->left, val);
@@ -10,12 +10,12 @@ BstNode* BinarySearchTree::Insert(BstNode* root, int val){
 
 void BinarySearchTree::Insert(int val){ root = Insert(root, val); }
 
-// 迭代版本
+// Iterative version
 /*
 void BinarySearchTree::Insert(int val) {
     BstNode* newNode = new BstNode{val, nullptr, nullptr};
 
-    if (root == nullptr) {  // 树为空，直接作为根
+    if (root == nullptr) { 
         root = newNode;
         return;
     }
@@ -34,7 +34,7 @@ void BinarySearchTree::Insert(int val) {
 }
 */
 
-// 递归版本
+// Recursive version
 bool BinarySearchTree::Search(BstNode* root, int val) const{
     if(root == nullptr) return false;
     else if(val == root->data) return true;
@@ -44,7 +44,7 @@ bool BinarySearchTree::Search(BstNode* root, int val) const{
 
 bool BinarySearchTree::Search(int val) const { return Search(root, val); }
 
-// 迭代版本
+// Iterative version
 /*
 bool BinarySearchTree::Search(int val) const {
     BstNode* curr = root;

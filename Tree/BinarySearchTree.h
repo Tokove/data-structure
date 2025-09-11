@@ -1,11 +1,10 @@
-// 二叉搜索树
 #pragma once
-// 创建节点
+// Create a node
 struct BstNode
 {
     int data;
-    BstNode* left;  // 左子节点
-    BstNode* right; // 右子节点
+    BstNode* left;  // Left child
+    BstNode* right; // Right child
 };
 
 class BinarySearchTree

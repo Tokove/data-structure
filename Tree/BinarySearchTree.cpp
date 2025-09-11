@@ -19,3 +19,18 @@ bool BinarySearchTree::Search(BstNode* root, int val) const{
 
 bool BinarySearchTree::Search(int val) const { return Search(root, val); }
 
+int BinarySearchTree::FindMin(BstNode* root) const {
+    if(root == nullptr) throw std::out_of_range("Tree is empty");
+    if(root->left == nullptr) return root->data;
+    return FindMin(root->left);
+}
+
+int BinarySearchTree::FindMin() const { return FindMin(root); }
+
+int BinarySearchTree::FindMax(BstNode* root) const {
+    if(root == nullptr) throw std::out_of_range("Tree is empty");
+    if(root->right == nullptr) return root->data;
+    return FindMax(root->right);
+}
+
+int BinarySearchTree::FindMax() const { return FindMax(root); }

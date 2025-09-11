@@ -1,6 +1,5 @@
-// 队列
 #pragma once
-// 创建节点
+// Create a node
 struct Node
 {
     int data;

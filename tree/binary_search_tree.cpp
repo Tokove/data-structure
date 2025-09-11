@@ -1,4 +1,4 @@
-#include"BinarySearchTree.h"
+#include"binary_search_tree.h"
 
 // Recursive version
 BstNode* BinarySearchTree::Insert(BstNode* root, int val){

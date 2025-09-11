@@ -10,6 +10,15 @@ BstNode* BinarySearchTree::Insert(BstNode* root, int val){
 
 void BinarySearchTree::Insert(int val){ root = Insert(root, val); }
 
+bool BinarySearchTree::Search(BstNode* root, int val) const{
+    if(root == nullptr) return false;
+    else if(val == root->data) return true;
+    else if(val < root->data) return Search(root->left, val);
+    else return Search(root->right, val);
+}
+
+bool BinarySearchTree::Search(int val) const { return Search(root, val); }
+
 // Iterative version
 /*
 void BinarySearchTree::Insert(int val) {
@@ -32,20 +41,7 @@ void BinarySearchTree::Insert(int val) {
     if (val <= parent->data) parent->left = newNode;
     else parent->right = newNode;
 }
-*/
 
-// Recursive version
-bool BinarySearchTree::Search(BstNode* root, int val) const{
-    if(root == nullptr) return false;
-    else if(val == root->data) return true;
-    else if(val < root->data) return Search(root->left, val);
-    else return Search(root->right, val);
-}
-
-bool BinarySearchTree::Search(int val) const { return Search(root, val); }
-
-// Iterative version
-/*
 bool BinarySearchTree::Search(int val) const {
     BstNode* curr = root;
     while (curr != nullptr) {

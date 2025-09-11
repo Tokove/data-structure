@@ -1,4 +1,4 @@
-#include"Stack.h"
+#include"stack.h"
 #include<iostream>
 
 void Stack::Push(int val){

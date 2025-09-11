@@ -5,7 +5,7 @@ void Queue::Push(int val){
     Node* temp = new Node();
     temp->data = val;
     temp->link = nullptr;
-    if(front == nullptr && back == nullptr){ // 等价与 front == nullptr
+    if(front == nullptr && back == nullptr){ // Equivalent to front == nullptr
         front = back = temp;
         return ;
     }

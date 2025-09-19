@@ -19,6 +19,7 @@ private:
     void PreOrder(BstNode* root) const;
     void InOrder(BstNode* root) const;
     void PostOrder(BstNode* root) const;
+    bool IsBST(BstNode* root, int minValue, int maxValue) const;
 public:
     BinarySearchTree():root(nullptr){}
     ~BinarySearchTree();
@@ -31,4 +32,5 @@ public:
     void PreOrder() const;
     void InOrder() const;
     void PostOrder() const;
+    bool IsBST() const;
 };

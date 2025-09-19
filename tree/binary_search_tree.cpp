@@ -85,3 +85,13 @@ void BinarySearchTree::PostOrder() const {
     PostOrder(root); 
     std::cout << std::endl;
 }
+
+bool BinarySearchTree::IsBST(BstNode* root, int minValue, int maxValue) const {
+    if(root == nullptr) return true;
+    if(root->data <= minValue || root->data >= maxValue) return false;
+    return IsBST(root->left, minValue, root->data) 
+        && IsBST(root->right, root->data, maxValue);
+    
+}
+
+bool BinarySearchTree::IsBST() const { return IsBST(root, INT_MIN, INT_MAX); }

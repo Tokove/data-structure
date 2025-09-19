@@ -49,3 +49,39 @@ void BinarySearchTree::LevelOrder() const {
     }
     std::cout << std::endl;
 }
+
+void BinarySearchTree::PreOrder(BstNode* root) const {
+    if(root == nullptr) return;
+    std::cout << root->data << ' ';
+    PreOrder(root->left);
+    PreOrder(root->right);
+}
+
+void BinarySearchTree::PreOrder() const { 
+    PreOrder(root); 
+    std::cout << std::endl;
+}
+
+void BinarySearchTree::InOrder(BstNode* root) const {
+    if(root == nullptr) return;
+    InOrder(root->left);
+    std::cout << root->data << ' ';
+    InOrder(root->right);
+}
+
+void BinarySearchTree::InOrder() const { 
+    InOrder(root); 
+    std::cout << std::endl;
+}
+
+void BinarySearchTree::PostOrder(BstNode* root) const{
+    if(root == nullptr) return;
+    PostOrder(root->left);
+    PostOrder(root->right);
+    std::cout << root->data << ' ';
+}
+
+void BinarySearchTree::PostOrder() const {
+    PostOrder(root); 
+    std::cout << std::endl;
+}

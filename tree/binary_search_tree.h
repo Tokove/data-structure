@@ -22,4 +22,5 @@ public:
     bool Search(int val) const;
     int FindMin() const;
     int FindMax() const;
+    void LevelOrder() const;
 };
